@@ -987,24 +987,33 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Projects</h2>
-                <p>My professional and personal development projects</p>
-            </div>
-            <div class="projects-grid">
-                <!-- Secure Digital Signature System -->
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4361ee, #3a0ca3);">
-                        <i class="fas fa-signature"></i>
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <p>My professional and personal development projects</p>
+        </div>
+        
+        <!-- Project Filter Controls -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="professional">Professional</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Secure Digital Signature System -->
+            <div class="project-card" data-category="professional">
+                <div class="project-image" style="background: linear-gradient(135deg, #4361ee, #3a0ca3);">
+                    <i class="fas fa-signature"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Secure Digital Signature System</h3>
+                        <div class="project-status">Trufe</div>
                     </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Secure Digital Signature System</h3>
-                            <div class="project-status">Trufe</div>
-                        </div>
-                        <p class="project-description">Built a secure document signing system with real-time verification for Trufe, reducing document processing time by 40%.</p>
+                    <div class="project-description">
+                        <p>Built a secure document signing system with real-time verification for Trufe, reducing document processing time by 40%.</p>
                         <div class="project-tech">
                             <span class="tech-item">Java</span>
                             <span class="tech-item">Spring Boot</span>
@@ -1012,238 +1021,392 @@
                             <span class="tech-item">Socket.IO</span>
                             <span class="tech-item">Redis</span>
                         </div>
+                    </div>
+                    <div class="project-details">
                         <ul class="project-achievements">
                             <li>Reduced document verification time by 40%</li>
                             <li>Implemented hardware security modules integration</li>
                             <li>Enabled real-time status updates</li>
                         </ul>
                     </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
                 </div>
-                
-                <!-- CredMudra -->
-         <div class="project-card">
-    <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
-        <i class="fas fa-hand-holding-usd"></i>
-    </div>
-    <div class="project-content">
-        <div class="project-header">
-            <h3 class="project-title">CredMudra</h3>
-            <div class="project-status">Zappin</div>
-        </div>
-        <p class="project-description">
-            A scalable loan matchmaking and credit assessment platform that integrates with 15+ financial institutions to deliver personalized loan offers. The system dynamically analyzes borrower profiles and matches them with optimal lender products using scoring algorithms, real-time rule engines, and eligibility workflows. Built on microservices architecture with central configuration and service discovery, it also supports efficient reporting, live tracking, and partner dashboard systems.
-        </p>
-        <div class="project-tech">
-            <span class="tech-item">Spring Boot</span>
-            <span class="tech-item">Microservices</span>
-            <span class="tech-item">RESTful APIs</span>
-            <span class="tech-item">OAuth 2.0</span>
-            <span class="tech-item">PostgreSQL</span>
-            <span class="tech-item">MongoDB</span>
-            <span class="tech-item">Eureka Discovery Server</span>
-            <span class="tech-item">Spring Cloud Config Server</span>
-            <span class="tech-item">Executor Framework</span>
-        </div>
-        <ul class="project-achievements">
-            <li>Integrated with 15+ lender APIs using both <strong>REST</strong> and <strong>SOAP</strong> protocols for seamless offer ingestion</li>
-            <li>Implemented a dynamic <strong>loan matchmaking engine</strong> that evaluates user eligibility and selects best-fit offers based on lender criteria and borrower creditworthiness</li>
-            <li>Used <strong>MongoDB</strong> for storing lender metadata and offer history for flexible, high-speed retrieval and analytics</li>
-            <li>Employed <strong>Executor Framework</strong> to generate and dispatch loan reports and notifications in parallel for real-time delivery</li>
-            <li>Utilized <strong>Spring Cloud Config Server</strong> for centralized configuration management across multiple environments</li>
-            <li>Enabled service registration and discovery using <strong>Eureka Server</strong> to ensure smooth inter-service communication and fault tolerance</li>
-            <li>Implemented OAuth 2.0-based authentication to secure APIs and user sessions across partner dashboards and applicant journeys</li>
-            <li>Reduced loan processing time by <strong>45%</strong> by streamlining lender communication, caching responses, and improving decision logic</li>
-            <li>Built a live <strong>loan tracking module</strong> that updates users on application stages and feedback from financial institutions</li>
-        </ul>
-    </div>
-</div>
-
-            <!--    // auction ext  -->
-<div class="project-card">
-    <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
-        <i class="fas fa-gavel"></i> <!-- Auction icon -->
-    </div>
-    <div class="project-content">
-        <div class="project-header">
-            <h3 class="project-title">Auction.ext</h3>
-            <div class="project-status">Trufe</div>
-        </div>
-        <p class="project-description">
-            Distributed auction management platform supporting real-time bidding, smart auction scheduling, and low-latency updates using hybrid data architecture.
-        </p>
-        <div class="project-tech">
-            <span class="tech-item">Spring Boot</span>
-            <span class="tech-item">Microservices</span>
-            <span class="tech-item">API Gateway</span>
-            <span class="tech-item">Executor Framework</span>
-            <span class="tech-item">Firebase</span>
-            <span class="tech-item">WebSockets</span>
-            <span class="tech-item">AES Encryption</span>
-            <span class="tech-item">PostgreSQL</span>
-        </div>
-        <ul class="project-achievements">
-            <li>Engineered real-time bid streaming via WebSockets and Firebase for sub-second updates</li>
-            <li>Utilized Spring's <strong>ExecutorService</strong> for parallel auction scheduling and timeout management</li>
-            <li>Implemented a custom <strong>API Gateway</strong> for routing bid requests to appropriate auction instances</li>
-            <li>Secured bid transactions using <strong>AES 256-bit encryption</strong> to ensure network-level data protection</li>
-            <li>Leveraged Firebase Realtime Database to handle ultra-low bid updates with minimal latency</li>
-        </ul>
-    </div>
-</div>
-
-                <!-- Lead Analytical System -->
-               <div class="project-card">
-    <div class="project-image" style="background: linear-gradient(135deg, #3a0ca3, #4cc9f0);">
-        <i class="fas fa-chart-line"></i>
-    </div>
-    <div class="project-content">
-        <div class="project-header">
-            <h3 class="project-title">Lead Analytical System</h3>
-            <div class="project-status">Zappian</div>
-        </div>
-        <p class="project-description">
-            A real-time lead intelligence and scoring platform designed to analyze lead behavior, segment quality, and predict conversion potential. The system uses high-performance analytics powered by ClickHouse and Elasticsearch to deliver granular insights through interactive dashboards. Integrated with centralized authentication and role-based access, it supports advanced filtering, drill-down reports, and lead heatmaps.
-        </p>
-        <div class="project-tech">
-            <span class="tech-item">Spring Boot</span>
-            <span class="tech-item">ClickHouse</span>
-            <span class="tech-item">Redis</span>
-            <span class="tech-item">JWT Auth</span>
-            <span class="tech-item">Role-Based Access</span>
-            <span class="tech-item">Data Visualization</span>
-        </div>
-        <ul class="project-achievements">
-            <li>Boosted lead conversion rates by <strong>30%</strong> by identifying high-performing traffic sources and optimizing targeting strategies</li>
-            <li>Reduced data processing time by <strong>50%</strong> using <strong>Kafka</strong> for streaming ingestion and <strong>ClickHouse</strong> for high-speed OLAP queries</li>
-            <li>Built real-time analytics dashboards with drill-down filters, trend analysis, and cohort visualizations</li>
-            <li>Integrated with centralized <strong>Identity Provider</strong> for secured access via <strong>JWT tokens</strong></li>
-            <li>Implemented <strong>role-based access control (RBAC)</strong> to manage permissions for admins, managers, and partners</li>
-            <li>Used <strong>Redis</strong> for caching lead metrics and filters to reduce dashboard load times</li>
-            <li>Delivered automated and on-demand report generation modules for performance summaries and daily snapshots</li>
-            <li>Leveraged <strong>Elasticsearch</strong> for flexible search queries and aggregations across lead attributes</li>
-        </ul>
-    </div>
-</div>
-
-               <!-- Identity Provider -->
-<div class="project-card">
-    <div class="project-image" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
-        <i class="fas fa-user-shield"></i>
-    </div>
-    <div class="project-content">
-        <div class="project-header">
-            <h3 class="project-title">Identity Provider Service</h3>
-            <div class="project-status">Personal</div>
-        </div>
-        <p class="project-description">
-            Centralized identity and access management system implementing OAuth 2.0 with PKCE, RSA-encrypted JWTs, and multi-factor authentication for secure user authorization. This Identity Provider (IdP) acts as the single source of authentication truth across the entire microservices ecosystem—providing scoped tokens, access control, and federated login support. Built with extensibility in mind, it handles token issuance, refresh flow, user credential validation, and client application registration, all while enforcing strict cryptographic standards.
-        </p>
-        <div class="project-tech">
-            <span class="tech-item">Spring Security</span>
-            <span class="tech-item">OAuth 2.0</span>
-            <span class="tech-item">PKCE</span>
-            <span class="tech-item">JWT (RSA)</span>
-            <span class="tech-item">Redis</span>
-            <span class="tech-item">PostgreSQL</span>
-        </div>
-        <ul class="project-achievements">
-            <li>Implemented secure <strong>PKCE (Proof Key for Code Exchange)</strong> flow for public clients to prevent authorization code interception</li>
-            <li>Used <strong>JWTs with RSA-256</strong> asymmetric encryption for stateless and verifiable user sessions</li>
-            <li>Enabled <strong>multi-factor authentication</strong> with support for TOTP and hardware tokens</li>
-            <li>Integrated social login with OAuth 2.0 providers like Google and Facebook</li>
-            <li>Leveraged <strong>Redis</strong> for storing short-lived session tokens and authorization grants to improve performance and scalability</li>
-            <li>Utilized <strong>PostgreSQL</strong> as a relational store for persisting user credentials, roles, and client application metadata with referential integrity</li>
-            <li>Configured token introspection and refresh endpoints to serve the needs of distributed microservices across the ecosystem</li>
-            <li>Serves as the <strong>single authentication entry point</strong> for ecosystem services like product management, order processing, payment, vendor dashboards, and admin portals—enforcing consistent access control and token validation</li>
-        </ul>
-    </div>
-</div>
-
-                
-<!-- Saman Deekho -->
-<div class="project-card">
-    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3a0ca3);">
-        <i class="fas fa-store"></i>
-    </div>
-    <div class="project-content">
-        <div class="project-header">
-            <h3 class="project-title">Saman Deekho</h3>
-            <div class="project-status">In Development</div>
-        </div>
-        <p class="project-description">
-            Hyperlocal e-commerce platform enabling local vendors to register, manage inventory, and list products with real-time geolocation-based discovery and user interaction.
-        </p>
-        <div class="project-tech">
-            <span class="tech-item">Spring Boot</span>
-            <span class="tech-item">Spring WebFlux</span>
-            <span class="tech-item">MongoDB</span>
-            <span class="tech-item">PostgreSQL</span>
-            <span class="tech-item">Redis</span>
-            <span class="tech-item">Elasticsearch</span>
-            <span class="tech-item">WebSockets</span>
-            <span class="tech-item">API Gateway</span>
-            <span class="tech-item">IDP (OAuth2 + JWT)</span>
-        </div>
-        <ul class="project-achievements">
-            <li>Designed a dual-database architecture: <strong>MongoDB</strong> for flexible product catalog and <strong>PostgreSQL</strong> for transactional vendor/user data with relational integrity</li>
-            <li>Integrated <strong>IDP-based authentication</strong> with OAuth 2.0 and JWT for secure access and session management</li>
-            <li>Implemented <strong>geospatial search</strong> via MongoDB and Elasticsearch to suggest nearby vendors and relevant products</li>
-            <li>Used <strong>Redis</strong> as a caching layer for vendor/product data and session tokens, enhancing performance</li>
-            <li>Established <strong>API Gateway</strong> to route client requests to appropriate microservices, supporting load balancing and rate limiting</li>
-            <li>Enabled <strong>real-time inventory updates and notifications</strong> using WebSockets for a dynamic user experience</li>
-            <li>Working on intelligent <strong>recommendation engine</strong> using vendor activity and product interactions</li>
-        </ul>
-    </div>
-</div>
-               </section>
-    <!-- Education & Achievements -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Education & Achievements</h2>
-                <p>My academic background and professional accomplishments</p>
             </div>
-            <div class="education-content">
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3 class="education-title">Bachelor of Engineering - CSE</h3>
-                        <div class="education-date">2023</div>
-                    </div>
-                    <div class="education-details">Barkatullah University, Bhopal, MP</div>
-                    <div class="education-percentage">Graduated</div>
+            
+            <!-- CredMudra -->
+            <div class="project-card" data-category="professional">
+                <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
+                    <i class="fas fa-hand-holding-usd"></i>
                 </div>
-                
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3 class="education-title">Class XII</h3>
-                        <div class="education-date">2019</div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">CredMudra</h3>
+                        <div class="project-status">Zappin</div>
                     </div>
-                    <div class="education-details">Jawahar Navodaya Vidyalaya</div>
-                    <div class="education-percentage">84%</div>
-                </div>
-                
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3 class="education-title">Class X</h3>
-                        <div class="education-date">2017</div>
+                    <div class="project-description">
+                        <p>A scalable loan matchmaking and credit assessment platform that integrates with 15+ financial institutions.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">Microservices</span>
+                            <span class="tech-item">RESTful APIs</span>
+                            <span class="tech-item">OAuth 2.0</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">MongoDB</span>
+                        </div>
                     </div>
-                    <div class="education-details">Jawahar Navodaya Vidyalaya</div>
-                    <div class="education-percentage">9.0 CGPA</div>
+                    <div class="project-details">
+                        <ul class="project-achievements">
+                            <li>Integrated with 15+ lender APIs using both REST and SOAP protocols</li>
+                            <li>Implemented dynamic loan matchmaking engine</li>
+                            <li>Used MongoDB for flexible data storage and analytics</li>
+                            <li>Reduced loan processing time by 45%</li>
+                            <li>Built live loan tracking module</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
                 </div>
-                
-                <div class="achievements-card">
-                    <h3>Achievements</h3>
-                    <ul class="achievements-list">
-                        <li><i class="fas fa-trophy"></i> Solved 400+ coding challenges on GeeksforGeeks, HackerRank, and LeetCode</li>
-                        <li><i class="fas fa-star"></i> Achieved 6-Star rating in Data Structures & Algorithms on HackerRank</li>
-                        <li><i class="fas fa-bolt"></i> Reduced API latency by 20% through performance optimization</li>
-                        <li><i class="fas fa-chart-line"></i> Cut infrastructure costs by 25% with strategic caching & database optimizations</li>
-                    </ul>
+            </div>
+            
+            <!-- Auction.ext -->
+            <div class="project-card" data-category="professional">
+                <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Auction.ext</h3>
+                        <div class="project-status">Trufe</div>
+                    </div>
+                    <div class="project-description">
+                        <p>Distributed auction management platform supporting real-time bidding and smart auction scheduling.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">Microservices</span>
+                            <span class="tech-item">API Gateway</span>
+                            <span class="tech-item">Firebase</span>
+                            <span class="tech-item">WebSockets</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul class="project-achievements">
+                            <li>Engineered real-time bid streaming via WebSockets</li>
+                            <li>Implemented custom API Gateway for routing requests</li>
+                            <li>Secured transactions with AES 256-bit encryption</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            
+            <!-- Lead Analytical System -->
+            <div class="project-card" data-category="professional">
+                <div class="project-image" style="background: linear-gradient(135deg, #3a0ca3, #4cc9f0);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Lead Analytical System</h3>
+                        <div class="project-status">Zappian</div>
+                    </div>
+                    <div class="project-description">
+                        <p>Real-time lead intelligence and scoring platform with interactive dashboards.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">ClickHouse</span>
+                            <span class="tech-item">Redis</span>
+                            <span class="tech-item">JWT Auth</span>
+                            <span class="tech-item">Data Visualization</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul class="project-achievements">
+                            <li>Boosted lead conversion rates by 30%</li>
+                            <li>Reduced data processing time by 50%</li>
+                            <li>Built real-time analytics dashboards</li>
+                            <li>Integrated with centralized Identity Provider</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            
+            <!-- Identity Provider -->
+            <div class="project-card" data-category="personal">
+                <div class="project-image" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Identity Provider Service</h3>
+                        <div class="project-status">Personal</div>
+                    </div>
+                    <div class="project-description">
+                        <p>Centralized identity and access management system implementing OAuth 2.0 with PKCE.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Security</span>
+                            <span class="tech-item">OAuth 2.0</span>
+                            <span class="tech-item">PKCE</span>
+                            <span class="tech-item">JWT (RSA)</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul class="project-achievements">
+                            <li>Implemented secure PKCE flow for public clients</li>
+                            <li>Used JWTs with RSA-256 encryption</li>
+                            <li>Enabled multi-factor authentication</li>
+                            <li>Integrated social login providers</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+            
+            <!-- Saman Deekho -->
+            <div class="project-card" data-category="personal">
+                <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3a0ca3);">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Saman Deekho</h3>
+                        <div class="project-status">In Development</div>
+                    </div>
+                    <div class="project-description">
+                        <p>Hyperlocal e-commerce platform enabling local vendors to register and list products.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">WebFlux</span>
+                            <span class="tech-item">MongoDB</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul class="project-achievements">
+                            <li>Designed dual-database architecture</li>
+                            <li>Integrated IDP-based authentication</li>
+                            <li>Implemented geospatial search</li>
+                            <li>Used Redis as caching layer</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<style>
+    /* Projects Section Styling */
+    .projects-section {
+        background-color: var(--section-bg);
+        padding: 5rem 0;
+    }
+    
+    .project-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        border: none;
+        background-color: var(--light);
+        color: var(--dark);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .filter-btn.active {
+        background-color: var(--primary);
+        color: white;
+    }
+    
+    .filter-btn:hover {
+        background-color: var(--primary);
+        color: white;
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+    
+    .project-card {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project-image {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+    }
+    
+    .project-content {
+        padding: 2rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.4rem;
+        color: var(--secondary);
+    }
+    
+    .project-status {
+        background: var(--light);
+        color: var(--dark);
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    
+    .project-description {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-description p {
+        margin-bottom: 1rem;
+        color: var(--dark);
+    }
+    
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tech-item {
+        background: rgba(67, 97, 238, 0.1);
+        color: var(--primary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    
+    .project-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .project-details.active {
+        max-height: 1000px;
+    }
+    
+    .project-achievements {
+        list-style: none;
+        margin-top: 1rem;
+    }
+    
+    .project-achievements li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--dark);
+    }
+    
+    .project-achievements li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--success);
+        font-weight: bold;
+    }
+    
+    .read-more-btn {
+        background: transparent;
+        border: none;
+        color: var(--primary);
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+    
+    .read-more-btn i {
+        transition: transform 0.3s ease;
+    }
+    
+    .read-more-btn.active i {
+        transform: rotate(180deg);
+    }
+</style>
+
+<script>
+    // Toggle read more functionality
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const projectCard = button.closest('.project-card');
+            const details = projectCard.querySelector('.project-details');
+            details.classList.toggle('active');
+            button.classList.toggle('active');
+            
+            // Update button text
+            if (details.classList.contains('active')) {
+                button.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            } else {
+                button.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            }
+        });
+    });
+    
+    // Project filtering functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active state
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            
+            // Filter projects
+            const filter = button.dataset.filter;
+            document.querySelectorAll('.project-card').forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
     <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
