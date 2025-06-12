@@ -1118,7 +1118,7 @@
             <div class="project-status">Personal</div>
         </div>
         <p class="project-description">
-            Centralized identity and access management system implementing OAuth 2.0 with PKCE, RSA-encrypted JWTs, and multi-factor authentication for secure user authorization.
+            Centralized identity and access management system implementing OAuth 2.0 with PKCE, RSA-encrypted JWTs, and multi-factor authentication for secure user authorization. This Identity Provider (IdP) acts as the single source of authentication truth across the entire microservices ecosystem—providing scoped tokens, access control, and federated login support. Built with extensibility in mind, it handles token issuance, refresh flow, user credential validation, and client application registration, all while enforcing strict cryptographic standards.
         </p>
         <div class="project-tech">
             <span class="tech-item">Spring Security</span>
@@ -1135,6 +1135,8 @@
             <li>Integrated social login with OAuth 2.0 providers like Google and Facebook</li>
             <li>Leveraged <strong>Redis</strong> for storing short-lived session tokens and authorization grants to improve performance and scalability</li>
             <li>Utilized <strong>PostgreSQL</strong> as a relational store for persisting user credentials, roles, and client application metadata with referential integrity</li>
+            <li>Configured token introspection and refresh endpoints to serve the needs of distributed microservices across the ecosystem</li>
+            <li>Serves as the <strong>single authentication entry point</strong> for ecosystem services like product management, order processing, payment, vendor dashboards, and admin portals—enforcing consistent access control and token validation</li>
         </ul>
     </div>
 </div>
