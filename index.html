@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Rajak - Java Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #7209b7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --card-bg: #ffffff;
+            --section-bg: #f1f4f8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--success);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #3a0ca3 0%, #4361ee 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234361ee' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.2;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .highlight {
+            color: var(--success);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--success);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button.outline {
+            background: transparent;
+            border: 2px solid var(--success);
+            color: white;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-button.outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--dark);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        
+        /* Summary Section */
+        .summary-content {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .summary-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            background-color: var(--section-bg);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 3px solid var(--primary);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .skill-category h3 i {
+            color: var(--accent);
+            background: rgba(114, 9, 183, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-list li i {
+            color: var(--success);
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+            padding: 0 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border: 1px solid rgba(67, 97, 238, 0.1);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--card-bg);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -40px;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+        }
+        
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .timeline-date {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .timeline-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .timeline-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .timeline-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            background-color: var(--section-bg);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .project-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            color: var(--secondary);
+        }
+        
+        .project-status {
+            background: var(--light);
+            color: var(--dark);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-item {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .project-description {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-achievements {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .project-achievements li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .project-achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Education & Achievements */
+        .education-section {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+        }
+        
+        .education-section .section-header h2 {
+            color: white;
+        }
+        
+        .education-section .section-header h2::after {
+            background: var(--success);
+        }
+        
+        .education-section .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .education-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .education-title {
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        .education-date {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .education-details {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .education-percentage {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--success);
+            margin-top: 0.5rem;
+        }
+        
+        .achievements-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .achievements-card h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .achievements-list {
+            list-style: none;
+        }
+        
+        .achievements-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .achievements-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .achievements-list li i {
+            color: var(--success);
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--section-bg);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            background: rgba(67, 97, 238, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .contact-card a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--secondary), var(--dark));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--success);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-content::before {
+                left: -40px !important;
+                right: auto !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .summary-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ashish<span>Rajak</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#summary">Summary</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Java Developer & <span class="highlight">Microservices Specialist</span></h1>
+                <p>Building scalable systems with Spring Boot, Spring Cloud, and Reactive Programming</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="cta-button">View My Projects</a>
+                    <a href="#contact" class="cta-button outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section id="summary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Summary</h2>
+                <p>Java Developer with expertise in building scalable microservices and optimizing system performance</p>
+            </div>
+            <div class="summary-content">
+                <p>Java Developer with 2 years of experience in building scalable microservices and optimizing system performance. Proficient in Spring Boot, Spring Cloud, RESTful APIs, and Reactive Programming. Skilled in API security (OAuth 2.0, JWT), database optimization (PostgreSQL, MongoDB, Redis), and CI/CD pipelines (Docker, Kubernetes).</p>
+                <p>Delivered measurable improvements in system performance and reliability through innovative solutions and optimizations.</p>
+                
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">40%</div>
+                        <div class="stat-label">Faster Document Verification</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-label">Improved Response Times</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">30%</div>
+                        <div class="stat-label">Reduced Production Failures</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <p>My technical expertise spans across multiple domains and technologies</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> Java</li>
+                        <li><i class="fas fa-check"></i> Spring Boot</li>
+                        <li><i class="fas fa-check"></i> Spring WebFlux</li>
+                        <li><i class="fas fa-check"></i> Spring Security</li>
+                        <li><i class="fas fa-check"></i> Hibernate</li>
+                        <li><i class="fas fa-check"></i> JPA</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> PostgreSQL</li>
+                        <li><i class="fas fa-check"></i> MySQL</li>
+                        <li><i class="fas fa-check"></i> MongoDB</li>
+                        <li><i class="fas fa-check"></i> Elasticsearch</li>
+                        <li><i class="fas fa-check"></i> Firebase</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> Docker</li>
+                        <li><i class="fas fa-check"></i> Kubernetes</li>
+                        <li><i class="fas fa-check"></i> Jenkins</li>
+                        <li><i class="fas fa-check"></i> GitHub Actions</li>
+                        <li><i class="fas fa-check"></i> AWS (EC2, S3, RDS)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> APIs & Security</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> RESTful APIs</li>
+                        <li><i class="fas fa-check"></i> GraphQL</li>
+                        <li><i class="fas fa-check"></i> OAuth 2.0</li>
+                        <li><i class="fas fa-check"></i> JWT</li>
+                        <li><i class="fas fa-check"></i> PKCS11</li>
+                        <li><i class="fas fa-check"></i> API Gateway</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work Experience</h2>
+                <p>My professional journey in software development</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Java Developer</h3>
+                                <div class="timeline-company">Trufe</div>
+                            </div>
+                            <div class="timeline-date">Sep 2024 - Present</div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Built a secure digital signature system using PKCS11 and Socket.IO, reducing document verification time by 40%</li>
+                            <li>Designed fault-tolerant microservices with Spring Cloud, improving system scalability and reliability</li>
+                            <li>Leveraged Firebase Firestore as the fastest database to track real-time auction bidding data</li>
+                            <li>Implemented Redis caching, boosting application response time by 35%</li>
+                            <li>Automated API testing & deployment using JUnit, TestContainers, and CI/CD, reducing production failures by 30%</li>
+                            <li>Integrated Elasticsearch for centralized logging, cutting debugging time by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Java Developer</h3>
+                                <div class="timeline-company">Zappian Fintech</div>
+                            </div>
+                            <div class="timeline-date">Dec 2023 - Sep 2024</div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Developed an automated lead distribution system, increasing conversion rates by 30%</li>
+                            <li>Integrated credit bureau APIs, reducing processing time by 50% and improving data accuracy</li>
+                            <li>Designed PAN verification APIs, eliminating manual errors and ensuring compliance</li>
+                            <li>Optimized database queries & indexing, improving query execution speed by 40%</li>
+                            <li>Enhanced CRM functionalities, boosting customer engagement by 20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>My professional and personal development projects</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Existing Project -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4361ee, #3a0ca3);">
+                        <i class="fas fa-signature"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Secure Digital Signature System</h3>
+                            <div class="project-status">Trufe</div>
+                        </div>
+                        <p class="project-description">Built a secure document signing system with real-time verification for Trufe, reducing document processing time by 40%.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Java</span>
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">PKCS11</span>
+                            <span class="tech-item">Socket.IO</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Reduced document verification time by 40%</li>
+                            <li>Implemented hardware security modules integration</li>
+                            <li>Enabled real-time status updates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Project -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <div class="project-status">Personal</div>
+                        </div>
+                        <p class="project-description">Scalable e-commerce platform with microservices architecture supporting thousands of concurrent users.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">MongoDB</span>
+                            <span class="tech-item">Redis</span>
+                            <span class="tech-item">Kafka</span>
+                            <span class="tech-item">OAuth 2.0</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Implemented JWT-based authentication and OAuth 2.0</li>
+                            <li>Used Redis for caching product catalog and shopping carts</li>
+                            <li>Integrated Kafka for order processing and notifications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Identity Provider -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #3a0ca3, #4cc9f0);">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Identity Provider Service</h3>
+                            <div class="project-status">Personal</div>
+                        </div>
+                        <p class="project-description">Centralized authentication service with OAuth 2.0 and MFA support for secure application access.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Security</span>
+                            <span class="tech-item">OAuth 2.0</span>
+                            <span class="tech-item">JWT</span>
+                            <span class="tech-item">PKCS11</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Implemented multi-factor authentication with hardware tokens</li>
+                            <li>Integrated with social login providers (Google, Facebook)</li>
+                            <li>Used JWT with RSA encryption for stateless authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Deekho Project -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Deekho - Local Services Platform</h3>
+                            <div class="project-status">In Development</div>
+                        </div>
+                        <p class="project-description">Platform for discovering and booking local services nearby with real-time availability.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">WebFlux</span>
+                            <span class="tech-item">MongoDB</span>
+                            <span class="tech-item">Elasticsearch</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Implementing geospatial queries for nearby service providers</li>
+                            <li>Developing real-time booking and notification system</li>
+                            <li>Using Elasticsearch for fast search and recommendations</li>
+                            <li>Building reactive architecture with WebFlux for scalability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Achievements -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education & Achievements</h2>
+                <p>My academic background and professional accomplishments</p>
+            </div>
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-title">Bachelor of Engineering - CSE</h3>
+                        <div class="education-date">2023</div>
+                    </div>
+                    <div class="education-details">Barkatullah University, Bhopal, MP</div>
+                    <div class="education-percentage">Graduated</div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-title">Class XII</h3>
+                        <div class="education-date">2019</div>
+                    </div>
+                    <div class="education-details">Jawahar Navodaya Vidyalaya</div>
+                    <div class="education-percentage">84%</div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3 class="education-title">Class X</h3>
+                        <div class="education-date">2017</div>
+                    </div>
+                    <div class="education-details">Jawahar Navodaya Vidyalaya</div>
+                    <div class="education-percentage">9.0 CGPA</div>
+                </div>
+                
+                <div class="achievements-card">
+                    <h3>Achievements</h3>
+                    <ul class="achievements-list">
+                        <li><i class="fas fa-trophy"></i> Solved 400+ coding challenges on GeeksforGeeks, HackerRank, and LeetCode</li>
+                        <li><i class="fas fa-star"></i> Achieved 6-Star rating in Data Structures & Algorithms on HackerRank</li>
+                        <li><i class="fas fa-bolt"></i> Reduced API latency by 20% through performance optimization</li>
+                        <li><i class="fas fa-chart-line"></i> Cut infrastructure costs by 25% with strategic caching & database optimizations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations or just a friendly hello</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:ashishrajak8889@gmail.com">ashishrajak8889@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <a href="tel:+917489455045">+91 7489455045</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/ashishrajak" target="_blank">github.com/ashishrajak</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/ashish-rajak-007388195" target="_blank">linkedin.com/in/ashish-rajak</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://github.com/ashishrajak" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ashish-rajak-007388195" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ashishrajak8889@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>&copy; 2024 Ashish Rajak. All rights reserved.</p>
+                <p>Designed to impress recruiters with impact and clarity</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
