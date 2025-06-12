@@ -1028,7 +1028,7 @@
                     <div class="project-content">
                         <div class="project-header">
                             <h3 class="project-title">CredMudra</h3>
-                            <div class="project-status">Completed</div>
+                            <div class="project-status">Zappin</div>
                         </div>
                         <p class="project-description">Loan matchmaking platform integrating with 15+ lenders for personalized loan recommendations.</p>
                         <div class="project-tech">
@@ -1044,8 +1044,43 @@
                             <li>Reduced loan processing time by 45%</li>
                         </ul>
                     </div>
-                </div>
-                
+
+                    
+              </div>
+
+            <!--    // auction ext  -->
+<div class="project-card">
+    <div class="project-image" style="background: linear-gradient(135deg, #7209b7, #4361ee);">
+        <i class="fas fa-gavel"></i> <!-- Auction icon -->
+    </div>
+    <div class="project-content">
+        <div class="project-header">
+            <h3 class="project-title">Auction.ext</h3>
+            <div class="project-status">Trufe</div>
+        </div>
+        <p class="project-description">
+            Distributed auction management platform supporting real-time bidding, smart auction scheduling, and low-latency updates using hybrid data architecture.
+        </p>
+        <div class="project-tech">
+            <span class="tech-item">Spring Boot</span>
+            <span class="tech-item">Microservices</span>
+            <span class="tech-item">API Gateway</span>
+            <span class="tech-item">Executor Framework</span>
+            <span class="tech-item">Firebase</span>
+            <span class="tech-item">WebSockets</span>
+            <span class="tech-item">AES Encryption</span>
+            <span class="tech-item">PostgreSQL</span>
+        </div>
+        <ul class="project-achievements">
+            <li>Engineered real-time bid streaming via WebSockets and Firebase for sub-second updates</li>
+            <li>Utilized Spring's <strong>ExecutorService</strong> for parallel auction scheduling and timeout management</li>
+            <li>Implemented a custom <strong>API Gateway</strong> for routing bid requests to appropriate auction instances</li>
+            <li>Secured bid transactions using <strong>AES 256-bit encryption</strong> to ensure network-level data protection</li>
+            <li>Leveraged Firebase Realtime Database to handle ultra-low bid updates with minimal latency</li>
+        </ul>
+    </div>
+</div>
+
                 <!-- Lead Analytical System -->
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #3a0ca3, #4cc9f0);">
@@ -1072,62 +1107,75 @@
                     </div>
                 </div>
                 
-                <!-- Identity Provider -->
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Identity Provider Service</h3>
-                            <div class="project-status">Personal</div>
-                        </div>
-                        <p class="project-description">Centralized authentication service with OAuth 2.0 and MFA support for secure application access.</p>
-                        <div class="project-tech">
-                            <span class="tech-item">Spring Security</span>
-                            <span class="tech-item">OAuth 2.0</span>
-                            <span class="tech-item">JWT</span>
-                            <span class="tech-item">PKCS11</span>
-                            <span class="tech-item">Redis</span>
-                        </div>
-                        <ul class="project-achievements">
-                            <li>Implemented multi-factor authentication with hardware tokens</li>
-                            <li>Integrated with social login providers (Google, Facebook)</li>
-                            <li>Used JWT with RSA encryption for stateless authentication</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Saman Deekho -->
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3a0ca3);">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">Saman Deekho</h3>
-                            <div class="project-status">In Development</div>
-                        </div>
-                        <p class="project-description">Platform for local vendors to register and list their products with geolocation-based discovery.</p>
-                        <div class="project-tech">
-                            <span class="tech-item">Spring Boot</span>
-                            <span class="tech-item">WebFlux</span>
-                            <span class="tech-item">MongoDB</span>
-                            <span class="tech-item">Elasticsearch</span>
-                            <span class="tech-item">Redis</span>
-                        </div>
-                        <ul class="project-achievements">
-                            <li>Implementing geospatial queries for nearby vendors</li>
-                            <li>Developing vendor registration and product listing system</li>
-                            <li>Building real-time inventory management</li>
-                            <li>Creating recommendation engine for products</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+               <!-- Identity Provider -->
+<div class="project-card">
+    <div class="project-image" style="background: linear-gradient(135deg, #4cc9f0, #7209b7);">
+        <i class="fas fa-user-shield"></i>
+    </div>
+    <div class="project-content">
+        <div class="project-header">
+            <h3 class="project-title">Identity Provider Service</h3>
+            <div class="project-status">Personal</div>
         </div>
-    </section>
+        <p class="project-description">
+            Centralized identity and access management system implementing OAuth 2.0 with PKCE, RSA-encrypted JWTs, and multi-factor authentication for secure user authorization.
+        </p>
+        <div class="project-tech">
+            <span class="tech-item">Spring Security</span>
+            <span class="tech-item">OAuth 2.0</span>
+            <span class="tech-item">PKCE</span>
+            <span class="tech-item">JWT (RSA)</span>
+            <span class="tech-item">Redis</span>
+            <span class="tech-item">PostgreSQL</span>
+        </div>
+        <ul class="project-achievements">
+            <li>Implemented secure <strong>PKCE (Proof Key for Code Exchange)</strong> flow for public clients to prevent authorization code interception</li>
+            <li>Used <strong>JWTs with RSA-256</strong> asymmetric encryption for stateless and verifiable user sessions</li>
+            <li>Enabled <strong>multi-factor authentication</strong> with support for TOTP and hardware tokens</li>
+            <li>Integrated social login with OAuth 2.0 providers like Google and Facebook</li>
+            <li>Leveraged <strong>Redis</strong> for storing short-lived session tokens and authorization grants to improve performance and scalability</li>
+            <li>Utilized <strong>PostgreSQL</strong> as a relational store for persisting user credentials, roles, and client application metadata with referential integrity</li>
+        </ul>
+    </div>
+</div>
 
+                
+<!-- Saman Deekho -->
+<div class="project-card">
+    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3a0ca3);">
+        <i class="fas fa-store"></i>
+    </div>
+    <div class="project-content">
+        <div class="project-header">
+            <h3 class="project-title">Saman Deekho</h3>
+            <div class="project-status">In Development</div>
+        </div>
+        <p class="project-description">
+            Hyperlocal e-commerce platform enabling local vendors to register, manage inventory, and list products with real-time geolocation-based discovery and user interaction.
+        </p>
+        <div class="project-tech">
+            <span class="tech-item">Spring Boot</span>
+            <span class="tech-item">Spring WebFlux</span>
+            <span class="tech-item">MongoDB</span>
+            <span class="tech-item">PostgreSQL</span>
+            <span class="tech-item">Redis</span>
+            <span class="tech-item">Elasticsearch</span>
+            <span class="tech-item">WebSockets</span>
+            <span class="tech-item">API Gateway</span>
+            <span class="tech-item">IDP (OAuth2 + JWT)</span>
+        </div>
+        <ul class="project-achievements">
+            <li>Designed a dual-database architecture: <strong>MongoDB</strong> for flexible product catalog and <strong>PostgreSQL</strong> for transactional vendor/user data with relational integrity</li>
+            <li>Integrated <strong>IDP-based authentication</strong> with OAuth 2.0 and JWT for secure access and session management</li>
+            <li>Implemented <strong>geospatial search</strong> via MongoDB and Elasticsearch to suggest nearby vendors and relevant products</li>
+            <li>Used <strong>Redis</strong> as a caching layer for vendor/product data and session tokens, enhancing performance</li>
+            <li>Established <strong>API Gateway</strong> to route client requests to appropriate microservices, supporting load balancing and rate limiting</li>
+            <li>Enabled <strong>real-time inventory updates and notifications</strong> using WebSockets for a dynamic user experience</li>
+            <li>Working on intelligent <strong>recommendation engine</strong> using vendor activity and product interactions</li>
+        </ul>
+    </div>
+</div>
+               </section>
     <!-- Education & Achievements -->
     <section id="education" class="education-section">
         <div class="container">
